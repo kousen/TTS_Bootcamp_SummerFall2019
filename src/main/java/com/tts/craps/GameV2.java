@@ -28,7 +28,7 @@ public class GameV2 extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel north = new JPanel();
-        JPanel east = new JPanel();
+        JPanel west = new JPanel();
         JPanel center = new JPanel();
         JPanel south = new JPanel();
 
@@ -36,10 +36,11 @@ public class GameV2 extends JFrame {
 
         history.setEditable(false);
         history.setWrapStyleWord(true);
+        history.setFont(new Font("Dialog", Font.PLAIN, 16));
         JScrollPane scrollPane = new JScrollPane(history);
         scrollPane.setVerticalScrollBarPolicy(
                 JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-        east.add(scrollPane);
+        west.add(scrollPane);
 
         firstDie = new JLabel(diceImageIcons[0]);
         secondDie  = new JLabel(diceImageIcons[0]);
@@ -56,7 +57,7 @@ public class GameV2 extends JFrame {
         add(north, BorderLayout.NORTH);
         add(center, BorderLayout.CENTER);
         add(south, BorderLayout.SOUTH);
-        add(east, BorderLayout.EAST);
+        add(west, BorderLayout.WEST);
 
         setLocationRelativeTo(null);
         setSize(600,300);
