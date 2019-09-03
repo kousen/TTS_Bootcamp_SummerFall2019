@@ -15,4 +15,3 @@ public class HRTest {
         System.out.println(hr.payEverybody());
     }
 }
-

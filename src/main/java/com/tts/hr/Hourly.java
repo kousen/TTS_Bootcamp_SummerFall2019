@@ -6,7 +6,7 @@ public class Hourly extends Employee {
     private double rate;
     private double hours = DEFAULT_HOURS;
 
-    public  Hourly(String name) {
+    public Hourly(String name) {
         this(name, 100.0, DEFAULT_HOURS);
     }
 
@@ -43,6 +43,7 @@ public class Hourly extends Employee {
 
     @Override
     public String toString() {
-        return String.format("%s, rate = %s, hours = %s", super.toString(), rate, hours);
+        return super.toString() + ", rate = " + rate +
+                ", hours = " + hours;
     }
 }

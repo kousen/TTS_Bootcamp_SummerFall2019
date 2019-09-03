@@ -23,7 +23,6 @@ public class HR {
         for (Employee e : employees) {
             System.out.println(e + " is paid " + e.computePay());
             total += e.computePay();
-
         }
         return total;
     }

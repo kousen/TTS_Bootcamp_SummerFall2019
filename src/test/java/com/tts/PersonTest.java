@@ -3,6 +3,8 @@ package com.tts;
 import com.tts.after.Person;
 import org.junit.Test;
 
+import java.util.AbstractCollection;
+
 import static org.junit.Assert.*;
 
 public class PersonTest {
