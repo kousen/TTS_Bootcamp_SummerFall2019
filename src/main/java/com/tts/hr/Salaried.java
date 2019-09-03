@@ -18,6 +18,8 @@ public class Salaried extends Employee {
 
     public Salaried(String name, double salary) {
         super(name);
+
+      // super invoking the constructor in the parent
         this.salary = salary;
     }
 
@@ -36,7 +38,7 @@ public class Salaried extends Employee {
 
     @Override
     public String toString() {
-        return  super.toString() + ", salary = " +
+        return super.toString() + ", salary = " +
                 NumberFormat.getCurrencyInstance().format(salary);
     }
 }
