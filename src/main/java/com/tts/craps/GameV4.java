@@ -14,8 +14,8 @@ public class GameV4 extends JFrame {
     private String imageDir = "src/main/resources/";
 
     // Images from https://commons.wikimedia.org/wiki/Category:Dice_faces
-    private String[] diceImageFiles = { "Dice-1.png", "Dice-2.png",
-        "Dice-3.png", "Dice-4.png", "Dice-5.png", "Dice-6.png" };
+    private String[] diceImageFiles = {"Dice-1.png", "Dice-2.png",
+            "Dice-3.png", "Dice-4.png", "Dice-5.png", "Dice-6.png"};
 
     private ImageIcon[] diceImageIcons;
 
@@ -47,7 +47,7 @@ public class GameV4 extends JFrame {
         west.add(scrollPane);
 
         firstDie = new JLabel(diceImageIcons[0]);
-        secondDie  = new JLabel(diceImageIcons[0]);
+        secondDie = new JLabel(diceImageIcons[0]);
         center.add(firstDie);
         center.add(secondDie);
 
@@ -66,8 +66,12 @@ public class GameV4 extends JFrame {
         add(west, BorderLayout.WEST);
 
         setLocationRelativeTo(null);
-        setSize(600,300);
+        setSize(600, 300);
         setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(GameV4::new);
     }
 
     private void loadDiceImages() {
@@ -76,19 +80,14 @@ public class GameV4 extends JFrame {
                 .toArray(ImageIcon[]::new);
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(GameV4::new);
-    }
-
     private void startGame(ActionEvent e) {
         gameStatus = GameEnum.FIRST_ROLL;
-        point = 0;
         statusLabel.setText("Starting new game. Click roll button");
-        history.setText("");
+        history.setText("New game.");
         rollButton.setEnabled(true);
     }
 
-    private void setGameStatus(int roll) {
+    public void setGameStatus(int roll) {
         List<Integer> wins = Arrays.asList(7, 11);
         List<Integer> loses = Arrays.asList(2, 3, 12);
         GameEnum newStatus = GameEnum.PLAYING;
