@@ -24,27 +24,27 @@ public class GameV3 extends Application {
     private Random rand;
     private ArrayList<Image> imageList;
 
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     private void initialize() {
         rand = new Random();
 
         // Load the images.
-        Image[] images = new Image[] {
-            new Image("Dice-1.png"),
-            new Image("Dice-2.png"),
-            new Image("Dice-3.png"),
-            new Image("Dice-4.png"),
-            new Image("Dice-5.png"),
-            new Image("Dice-6.png")
+        Image[] images = new Image[]{
+                new Image("Dice-1.png"),
+                new Image("Dice-2.png"),
+                new Image("Dice-3.png"),
+                new Image("Dice-4.png"),
+                new Image("Dice-5.png"),
+                new Image("Dice-6.png")
         };
         imageList = new ArrayList<>(Arrays.asList(images));
     }
 
-        public static void main( String[] args ) {
-        launch(args);
-    }
-
     @Override
-    public void start( Stage stage ) {
+    public void start(Stage stage) {
         initialize();
         StackPane root = new StackPane();
         root.setPrefSize(300.0, 200.0);

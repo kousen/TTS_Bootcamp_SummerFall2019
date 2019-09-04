@@ -1,5 +1,5 @@
 package com.tts.craps;
 
 public enum GameEnum {
-    WON, LOST
+    FIRST_ROLL, WON, LOST, PLAYING
 }
