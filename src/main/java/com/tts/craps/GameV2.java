@@ -3,7 +3,6 @@ package com.tts.craps;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
@@ -83,6 +82,7 @@ public class GameV2 extends JFrame {
         }
     }
 
+    @SuppressWarnings("DuplicatedCode")
     private int roll() {
         int die1 = (int) (Math.random() * 6) + 1;
         int die2 = (int) (Math.random() * 6) + 1;
